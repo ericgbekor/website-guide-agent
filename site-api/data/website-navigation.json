@@ -1,0 +1,40 @@
+{
+  "navigation": [
+    {
+      "id": 1,
+      "section": "Home",
+      "url": "/"
+    },
+    {
+      "id": 2,  
+      "section": "About Us",
+      "url": "/about"
+    },
+    {
+      "id": 3,
+      "section": "Contact",
+      "url": "/contact",
+      "description": "Find our contact information including email, phone, and address."
+    },
+    {
+      "id": 4,
+      "section": "Services",
+      "url": "/services"
+    },
+    {
+      "id": 5,
+      "section": "Blog",
+      "url": "/blog"
+    },
+    {
+      "id": 6,
+      "section": "FAQ",
+      "url": "/faq"
+    },
+    {
+      "id": 7,
+      "section": "Pricing",
+      "url": "/pricing"
+    }
+  ]
+}

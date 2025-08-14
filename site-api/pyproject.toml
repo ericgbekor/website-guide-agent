@@ -1,0 +1,11 @@
+[project]
+name = "site-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "uvicorn>=0.35.0",
+    "google-cloud-logging>=3.8.0",
+]

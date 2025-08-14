@@ -1,0 +1,53 @@
+[project]
+name = "website-agent-service"
+version = "0.1.0"
+description = "Website Navigation Agent"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic-settings>=2.8.1",
+    "tabulate>=0.9.0",
+    "cloudpickle>=3.1.1",
+    "pylint>=3.3.6",
+    "google-cloud-aiplatform[adk,agent_engine]>=1.108.0",
+    "google-adk[eval]>=1.10.0",
+    "jsonschema>=4.23.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-mock>=3.14.0",
+    "scikit-learn>=1.6.1",
+    "pytest-cov>=6.0.0",
+    "pytest-asyncio>=0.25.3",
+    "flake8-pyproject>=1.2.3",
+    "pylint>=3.3.6",
+    "pyink>=24.10.1",
+    "jsonschema>=4.23.0",
+    "google-cloud-aiplatform[evaluation]>=1.108.0",
+]
+
+[tool.pytest.ini_options]
+console_output_style = "progress"
+addopts = "-vv -s"
+#addopts = "-vv -s --pdb"
+testpaths = ["tests/", "eval/"]
+markers = ["unit"]
+log_level = "ERROR"
+log_cli = false
+log_auto_indent = true
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli_format = "[%(asctime)s] %(levelname)s (%(funcName)s) \t [%(pathname)s:%(lineno)d] %(message)s"
+filterwarnings = ["ignore::UserWarning"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.pyink]
+line-length = 80
+pyink-indentation = 4
+pyink-use-majority-quotes = true

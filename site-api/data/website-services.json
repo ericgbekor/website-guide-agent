@@ -1,0 +1,39 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "Web development",
+      "description": "Full-stack web development services including frontend and backend solutions."
+    },
+    {
+      "id": 2,
+      "name": "Mobile app development",
+      "description": "Cross-platform mobile application development for iOS and Android."
+    },
+    {
+      "id": 3,
+      "name": "Cloud devops",
+      "description": "Google cloud architecture design and implementation."
+    },
+    {
+      "id": 4,
+      "name": "Software development",
+      "description": "Custom software solutions tailored to your business needs."
+    },
+    {
+      "id": 5,
+      "name": "UI/UX design",
+      "description": "User interface and user experience design services."
+    },
+    {
+      "id": 6,
+      "name": "Data and AI",
+      "description": "Data analytics and artificial intelligence solutions."
+    },
+    {
+      "id": 7,
+      "name": "Cybersecurity",
+      "description": "Comprehensive cybersecurity services to protect your digital assets."
+    }
+  ]
+}
