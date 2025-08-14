@@ -77,7 +77,7 @@ Both tools implement robust error handling, request timeouts (30 seconds), and p
 
 1. **Clone and navigate to the project:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ericgbekor/website-guide-agent
    cd website-navigation-agent/agent
    ```
 
@@ -191,9 +191,9 @@ Configuration is handled through [website_agent_service/config.py](./website_age
 
 ## Cloud Deployment
 
-### Using deploy.sh Script (Recommended)
+### 🚀 Recommended: Using deploy.sh Script
 
-The project includes a convenient deployment script that handles Google Cloud Run deployment:
+The easiest way to deploy the Agent Service is using the included deployment script that handles Google Cloud Run deployment automatically:
 
 1. **Configure deployment settings:**
    Edit `deploy.sh` and update the configuration section:

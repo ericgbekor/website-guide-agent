@@ -31,7 +31,7 @@ A Streamlit-based chat interface for interacting with Google ADK (Agent Developm
 
 ### 1. Clone and Navigate
 ```bash
-git clone <repository-url>
+git clone https://github.com/ericgbekor/website-guide-agent
 cd chat-ui
 ```
 
@@ -62,7 +62,7 @@ The application will be available at `http://localhost:8501`
 ### 4. Configure Your ADK Agent
 1. Open the sidebar in the Streamlit interface
 2. Enter your Cloud Run service URL (e.g., `https://your-service-123abc-uc.a.run.app`)
-3. Enter your ADK app name
+3. Enter your ADK app name (e.g. website-agent-app)
 4. Click "Save Configuration"
 5. Optionally create a session or start chatting directly
 
@@ -89,47 +89,45 @@ gcloud services enable run.googleapis.com
 gcloud services enable artifactregistry.googleapis.com
 ```
 
-### 🚀 Deployment Steps
+### 🚀 Recommended: Using deploy.sh Script
 
-### 1. Set Up Environment Variables
-Create a `.env` file in the project root:
+The simplest way to deploy the Chat UI is using the included deployment script:
 
-```bash
-# Required variables
-PROJECT_ID=your-gcp-project-id
-LOCATION=us-central1
-SERVICE_NAME=adk-chat-ui
-REPO_NAME=adk-chat-repo
-IMAGE_TAG=latest
+#### Quick Deployment
 
-# Optional variables (with defaults)
-MIN_INSTANCES=0
-MAX_INSTANCES=4
-MEMORY=512Mi
-CPU=1
-PORT=8000
-```
+1. **Set up environment variables** in `.env`:
+   ```bash
+   # Required variables
+   PROJECT_ID=your-gcp-project-id
+   LOCATION=us-central1
+   SERVICE_NAME=adk-chat-ui
+   REPO_NAME=adk-chat-repo
+   IMAGE_TAG=latest
 
-### 2. Authenticate with Google Cloud
-```bash
-gcloud auth login
-gcloud auth application-default login
-gcloud config set project YOUR_PROJECT_ID
-```
+   # Optional variables (with defaults)
+   MIN_INSTANCES=0
+   MAX_INSTANCES=4
+   MEMORY=512Mi
+   CPU=1
+   PORT=8000
+   ```
 
-### 3. Deploy Using Script
-Make the deploy script executable and run:
-```bash
-chmod +x deploy.sh
-./deploy.sh
-```
+2. **Deploy with one command**:
+   ```bash
+   chmod +x deploy.sh
+   ./deploy.sh
+   ```
 
-The script will:
-1. ✅ Validate environment variables
-2. 🔐 Set up Google Cloud authentication
-3. 📦 Create Artifact Registry repository
-4. 🚀 Build and push Docker image
-5. ☁️ Deploy to Cloud Run
+   The deployment script automatically:
+   - ✅ Validates all environment variables
+   - 🔐 Sets up Google Cloud authentication
+   - 📦 Creates Artifact Registry repository
+   - 🚀 Builds and pushes Docker image
+   - ☁️ Deploys to Cloud Run
+   - 🌐 Outputs the service URL
+
+3. **Access your chat interface**:
+   The script will display the Chat UI URL when deployment completes.
 
 ### 4. Manual Deployment (Alternative)
 
@@ -246,17 +244,6 @@ chat-ui/
 - Secure your ADK agent endpoints appropriately
 - Review IAM permissions regularly
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test locally and with Cloud Run deployment
-5. Submit a pull request
-
-## 📄 License
-
-[Add your license information here]
 
 ## 💬 Support
 

@@ -78,7 +78,7 @@ site-api/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ericgbekor/website-guide-agent
    cd site-api
    ```
 
@@ -191,7 +191,11 @@ docker-compose up --build
 
 ## ☁️ Google Cloud Run Deployment
 
-### Prerequisites
+### 🚀 Recommended: Using deploy.sh Script
+
+The easiest way to deploy the Site API is using the included deployment script:
+
+#### Prerequisites
 
 1. **Google Cloud CLI** installed and configured
 2. **Docker** installed and running
@@ -201,9 +205,9 @@ docker-compose up --build
    - Artifact Registry API
    - Cloud Logging API
 
-### Deployment Steps
+#### Quick Deployment
 
-1. **Configure environment variables** for deployment in `.env`:
+1. **Configure environment variables** in `.env`:
    ```bash
    GCLOUD_PROJECT_ID=your-project-id
    GCLOUD_REGION=europe-west2
@@ -212,21 +216,22 @@ docker-compose up --build
    IMAGE_TAG=latest
    ```
 
-2. **Run the deployment script**:
+2. **Deploy with one command**:
    ```bash
    chmod +x deploy.sh
    ./deploy.sh
    ```
 
-   The script will:
-   - ✅ Validate environment variables
-   - 🔐 Setup Google Cloud authentication
-   - 📦 Create Artifact Registry repository
-   - 🚀 Build and push Docker image
-   - ☁️ Deploy to Cloud Run
+   The script automatically handles:
+   - ✅ Environment variable validation
+   - 🔐 Google Cloud authentication setup
+   - 📦 Artifact Registry repository creation
+   - 🚀 Docker image build and push
+   - ☁️ Cloud Run service deployment
+   - 🌐 Service URL output
 
 3. **Access your deployed API**:
-   After deployment, the script will provide the service URL.
+   The script will display the service URL when deployment completes.
 
 ### Manual Deployment
 
