@@ -174,31 +174,6 @@ Here's a quick example of how a user might interact with the agent:
 
 **Agent:** Here's the direct link to our pricing page: [https://fictionsolutions.com/pricing]. You'll find detailed pricing information for all our services there. Is there anything specific about our pricing structure you'd like me to help clarify?
 
-## Testing and Development
-
-### Running Tests
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=website_agent_service
-
-# Run evaluation tests specifically
-pytest eval/
-```
-
-### Linting and Code Quality
-```bash
-# Run linting
-pylint website_agent_service/
-
-# Format code
-pyink website_agent_service/
-
-# Run type checking (if using mypy)
-mypy website_agent_service/
-```
 
 ## Configuration Management
 
@@ -348,11 +323,3 @@ If you need to integrate with the deployed agent programmatically, you can use t
 - Review [Cloud Run Documentation](https://cloud.google.com/run/docs)
 - For agent logic issues, check the logs in `website_agent_service/`
 - For deployment issues, review the `deploy.sh` script configuration
-
-## Disclaimer
-
-This agent sample is provided for illustrative purposes only and is not intended for production use. It serves as a basic example of an agent and a foundational starting point for individuals or teams to develop their own agents.
-
-This sample has not been rigorously tested, may contain bugs or limitations, and does not include features or optimizations typically required for a production environment (e.g., robust error handling, security measures, scalability, performance considerations, comprehensive logging, or advanced configuration options).
-
-Users are solely responsible for any further development, testing, security hardening, and deployment of agents based on this sample. We recommend thorough review, testing, and the implementation of appropriate safeguards before using any derived agent in a live or critical system.
