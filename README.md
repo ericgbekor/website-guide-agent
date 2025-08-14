@@ -216,13 +216,13 @@ For detailed setup, configuration, and troubleshooting information for each comp
 
 | Component | Quick Link | Description |
 |-----------|------------|-------------|
-| 🤖 **Agent Service** | [AGENT-README.md](AGENT-README.md) | Google ADK agent setup, tools, and deployment |
-| 🌐 **Site API** | [SITE-API-README.md](SITE-API-README.md) | FastAPI backend configuration and endpoints |  
-| 💬 **Chat UI** | [CHAT-UI-README.md](CHAT-UI-README.md) | Streamlit interface setup and usage |
+| 🤖 **Agent Service** | [agent/README.md](agent/README.md) | Google ADK agent setup, tools, and deployment |
+| 🌐 **Site API** | [site-api/README.md](site-api/README.md) | FastAPI backend configuration and endpoints |  
+| 💬 **Chat UI** | [chat-ui/README.md](chat-ui/README.md) | Streamlit interface setup and usage |
 
 ## Support & Documentation
 
-- Component-specific README files available in root directory (linked above)
+- Component-specific README files available in each subfolder (linked above)
 - Deployment scripts include comprehensive error handling and validation
 - All code includes extensive logging for debugging and monitoring
 - Interactive API documentation available at `/api/docs` endpoints
